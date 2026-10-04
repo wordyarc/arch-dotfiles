@@ -22,5 +22,3 @@ export SDKMAN_DIR="$XDG_DATA_HOME/sdkman"
 if [[ -n "$JAVA_HOME" && -d "$JAVA_HOME/bin" ]]; then
   path=("$JAVA_HOME/bin" $path)
 fi
-
-[[ -d "$HOME/.opencode/bin" ]] && path=("$HOME/.opencode/bin" $path)

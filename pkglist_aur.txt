@@ -1,0 +1,6 @@
+claude-code
+docker-clean-git
+fff-mcp-bin
+herdr-bin
+openai-codex-bin
+openspec
