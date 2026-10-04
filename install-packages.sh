@@ -2,10 +2,18 @@
 
 set -euo pipefail
 
-if (( $# )); then
-  echo "usage: ${0##*/}" >&2
-  exit 2
-fi
+usage() {
+  echo "usage: ${0##*/} [--disable-download-timeout]"
+}
+
+download_options=()
+for arg; do
+  case $arg in
+    --disable-download-timeout) download_options=(--disable-download-timeout) ;;
+    --help|-h) usage; exit 0 ;;
+    *) usage >&2; exit 2 ;;
+  esac
+done
 
 read_packages() {
   local package
@@ -24,9 +32,9 @@ read_packages pkglist.txt repo_packages
 read_packages pkglist_aur.txt aur_packages
 
 if (( ${#repo_packages[@]} )); then
-  sudo pacman -Syu --needed -- "${repo_packages[@]}"
+  sudo pacman -Syu --needed "${download_options[@]}" -- "${repo_packages[@]}"
 fi
 
 if (( ${#aur_packages[@]} )); then
-  paru -Sa --needed -- "${aur_packages[@]}"
+  paru -Sa --needed "${download_options[@]}" -- "${aur_packages[@]}"
 fi
