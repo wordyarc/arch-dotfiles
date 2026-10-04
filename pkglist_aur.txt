@@ -1,5 +1,8 @@
-claude-code
+# -- Docker ------------------------------------------------
 docker-clean-git
+
+# -- AI tooling --------------------------------------------
+claude-code
 fff-mcp-bin
 herdr-bin
 openai-codex-bin

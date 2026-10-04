@@ -12,7 +12,7 @@ read_packages() {
   local -n result=$2
 
   while read -r package || [[ -n "$package" ]]; do
-    [[ -z "$package" ]] || result+=("$package")
+    [[ -z "$package" || "$package" == \#* ]] || result+=("$package")
   done < "$1"
 }
 

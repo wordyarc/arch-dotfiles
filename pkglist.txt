@@ -1,50 +1,67 @@
+# -- Shell -------------------------------------------------
 atuin
-base-devel
+direnv
+fzf
+neovim
+tmux
+zoxide
+zsh
+
+# -- Files & text ------------------------------------------
 bat
+less
+mc
+pandoc-cli
+ripgrep
+rsync
+tree
+unzip
+yazi
+zip
+
+# -- System & network --------------------------------------
+curl
+fastfetch
+gnupg
+htop
+wl-clipboard
+
+# -- Git ---------------------------------------------------
+git
+git-filter-repo
+git-lfs
+github-cli
+lazygit
+
+# -- Languages & runtimes ----------------------------------
+go
+nodejs
+npm
+python
+python-pip
+rustup
+
+# -- Java --------------------------------------------------
+gradle
+jdk25-openjdk
+maven
+
+# -- Docker ------------------------------------------------
+docker
+docker-buildx
+docker-compose
+
+# -- Dev tools ---------------------------------------------
+base-devel
 boost
 boost-libs
 cargo-audit
 cloc
 cmake
-curl
-direnv
-docker
-docker-buildx
-docker-compose
-fastfetch
-fzf
-git
-git-filter-repo
-git-lfs
-github-cli
-gnupg
-go
-gradle
 graphviz
-htop
-jdk25-openjdk
-lazygit
-less
-maven
-mc
-neovim
-nodejs
-npm
-opencode
-pandoc-cli
-python
-python-pip
-ripgrep
-rsync
-rustup
 shellcheck
 sqlx-cli
-tmux
-tree
-unzip
 uv
-wl-clipboard
-yazi
-zip
-zoxide
-zsh
+
+# -- AI tooling --------------------------------------------
+opencode
