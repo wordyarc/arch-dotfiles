@@ -8,6 +8,7 @@ HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(
   aliases
+  # archlinux
   git
   dotenv
   tmux

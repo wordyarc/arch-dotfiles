@@ -31,6 +31,7 @@ source "$XDG_CONFIG_HOME/zsh/oh-my-zsh.zsh"
 
 source "$XDG_CONFIG_HOME/zsh/integrations.zsh"
 source "$XDG_CONFIG_HOME/zsh/aliases.zsh"
+source "$XDG_CONFIG_HOME/zsh/archlinux.zsh"
 source "$XDG_CONFIG_HOME/zsh/functions.zsh"
 source "$XDG_CONFIG_HOME/zsh/local.zsh"
 
