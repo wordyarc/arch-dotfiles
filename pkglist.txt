@@ -1,14 +1,62 @@
+# -- Base system -------------------------------------------
+base
+efibootmgr
+linux
+linux-firmware
+linux-headers
+linux-lts
+linux-lts-headers
+
+# -- Hardware ----------------------------------------------
+amd-ucode
+nvidia-open-dkms
+nvidia-utils
+
+# -- Desktop -----------------------------------------------
+greetd
+hyprland
+noctalia
+qt6-wayland
+xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
+
+# -- Audio -------------------------------------------------
+pipewire
+pipewire-alsa
+pipewire-pulse
+sound-theme-freedesktop
+wireplumber
+
+# -- Network & Bluetooth -----------------------------------
+bluez
+bluez-utils
+iwd
+networkmanager
+
+# -- Fonts -------------------------------------------------
+noto-fonts
+noto-fonts-emoji
+ttf-jetbrains-mono-nerd
+
+# -- Applications ------------------------------------------
+dolphin
+firefox
+ghostty
+
 # -- Shell -------------------------------------------------
 atuin
 direnv
 fzf
 neovim
 tmux
+vim
 zoxide
 zsh
 
 # -- Files & text ------------------------------------------
+7zip
 bat
+jq
 less
 mc
 pandoc-cli
@@ -19,11 +67,14 @@ unzip
 yazi
 zip
 
-# -- System & network --------------------------------------
+# -- System tools ------------------------------------------
 curl
 fastfetch
 gnupg
 htop
+man-db
+man-pages
+sudo
 wl-clipboard
 
 # -- Git ---------------------------------------------------
