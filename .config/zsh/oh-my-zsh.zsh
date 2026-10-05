@@ -10,6 +10,7 @@ plugins=(
   aliases
   # archlinux
   git
+  gh
   dotenv
   tmux
 )
