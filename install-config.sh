@@ -57,8 +57,9 @@ for file in .zshenv .zshrc; do
   install_file "$file" "$HOME/$file"
 done
 
-for app in zsh tmux; do
-  source_dir=".config/$app"
+for source_dir in .config/*; do
+  [[ -d "$source_dir" ]] || continue
+  app=${source_dir##*/}
   target_dir="$config_home/$app"
   while IFS= read -r -d '' file; do
     relative=${file#"$source_dir/"}
