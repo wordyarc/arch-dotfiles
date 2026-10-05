@@ -68,6 +68,7 @@ yazi
 zip
 
 # -- System tools ------------------------------------------
+archinstall
 curl
 fastfetch
 gnupg
