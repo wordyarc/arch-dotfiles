@@ -1,0 +1,78 @@
+{
+    "app_config": {
+        "audio_config": {
+            "audio": "pipewire"
+        }
+    },
+    "archinstall_language": "English",
+    "bootloader_config": {
+        "bootloader": "Systemd-boot",
+        "removable": false,
+        "uki": true
+    },
+    "custom_commands": [],
+    "firmware_optdeps": [],
+    "hostname": "archlinux",
+    "kernels": [
+        "linux",
+        "linux-lts"
+    ],
+    "locale_config": {
+        "console_font": "default8x16",
+        "kb_layout": "us",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US.UTF-8"
+    },
+    "mirror_config": {
+        "custom_repositories": [],
+        "custom_servers": [],
+        "mirror_regions": {},
+        "optional_repositories": []
+    },
+    "network_config": {
+        "type": "nm"
+    },
+    "ntp": true,
+    "packages": [
+        "amd-ucode",
+        "base-devel",
+        "ghostty",
+        "git",
+        "hyprland",
+        "linux-headers",
+        "linux-lts-headers",
+        "noctalia",
+        "nvidia-open-dkms",
+        "nvidia-utils",
+        "qt6-wayland",
+        "vim",
+        "xdg-desktop-portal-gtk",
+        "xdg-desktop-portal-hyprland",
+        "zsh",
+        "noto-fonts",
+        "noto-fonts-emoji",
+        "ttf-jetbrains-mono-nerd",
+        "sound-theme-freedesktop"
+    ],
+    "pacman_config": {
+        "color": true,
+        "parallel_downloads": 5
+    },
+    "profile_config": {
+        "gfx_driver": null,
+        "greeter": null,
+        "profile": {
+            "custom_settings": {},
+            "details": [],
+            "main": "Minimal"
+        }
+    },
+    "script": null,
+    "services": [],
+    "swap": {
+        "algorithm": "zstd",
+        "enabled": true
+    },
+    "timezone": "Asia/Vladivostok",
+    "version": "4.5"
+}
