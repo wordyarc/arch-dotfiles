@@ -75,6 +75,7 @@ gnupg
 htop
 man-db
 man-pages
+reflector
 sudo
 wl-clipboard
 
