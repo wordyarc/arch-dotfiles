@@ -1,0 +1,4 @@
+[shell.screenshot]
+save_to_file = false
+copy_to_clipboard = true
+pipe_to_command = false

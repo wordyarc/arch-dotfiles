@@ -236,6 +236,10 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + backslash", hl.dsp.layout("togglesplit"))    -- dwindle only
 
+hl.bind("CTRL + SHIFT + 3", hl.dsp.exec_cmd("noctalia msg screenshot-fullscreen all"))
+hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
+hl.bind("CTRL + SHIFT + 5", hl.dsp.exec_cmd("noctalia msg screenshot-annotate"))
+
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
