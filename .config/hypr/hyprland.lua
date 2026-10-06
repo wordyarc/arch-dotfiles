@@ -193,7 +193,7 @@ hl.config({
         kb_layout  = "us,ru",
         kb_variant = "",
         kb_model   = "",
-        kb_options = "ctrl:nocaps,grp:win_space_toggle",
+        kb_options = "ctrl:nocaps",
         kb_rules   = "",
 
         follow_mouse = 1,
@@ -236,6 +236,7 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 -- hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + backslash", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("hyprctl switchxkblayout all next"))
 
 hl.bind("CTRL + SHIFT + 3", hl.dsp.exec_cmd("noctalia msg screenshot-fullscreen all"))
 hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd("noctalia msg screenshot-region"))

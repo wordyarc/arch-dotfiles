@@ -1,0 +1,9 @@
+{
+   "$schema": "https://vicinae.com/schemas/config.json",
+   "global_shortcuts": {
+      "toggle": "alt+SPACE"
+   },
+   "telemetry": {
+      "system_info": false
+   }
+}
