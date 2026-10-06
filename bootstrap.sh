@@ -56,6 +56,13 @@ setup_user() {
   [[ ${shell##*/} == zsh ]] || chsh -s /usr/bin/zsh
 }
 
+install_tmux_plugins() {
+  local tpm_dir=$XDG_DATA_HOME/tmux/plugins/tpm
+
+  [[ -d "$tpm_dir" ]] || git clone --depth 1 https://github.com/tmux-plugins/tpm "$tpm_dir"
+  "$tpm_dir/bin/install_plugins"
+}
+
 package_options=()
 for arg; do
   case $arg in
@@ -71,10 +78,13 @@ if (( EUID == 0 )); then
 fi
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
+export XDG_DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
 
 install_paru
 ./install-packages.sh "${package_options[@]}"
 ./install-config.sh
+install_tmux_plugins
 install_system_files
 enable_services
 setup_user
