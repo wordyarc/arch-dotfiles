@@ -1,0 +1,14 @@
+# -- Desktop -----------------------------------------------
+greetd.service
+
+# -- Network & Bluetooth -----------------------------------
+AmneziaVPN.service
+bluetooth.service
+NetworkManager.service
+
+# -- System ------------------------------------------------
+fstrim.timer
+systemd-timesyncd.service
+
+# -- Docker ------------------------------------------------
+docker.service

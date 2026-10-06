@@ -1,5 +1,5 @@
 # -- Package management ------------------------------------
-paru
+paru-bin
 
 # -- Desktop -----------------------------------------------
 noctalia-greeter

@@ -13,9 +13,12 @@ nvidia-open-dkms
 nvidia-utils
 
 # -- Desktop -----------------------------------------------
+brightnessctl
 greetd
 hyprland
+hyprpolkitagent
 noctalia
+playerctl
 qt6-wayland
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
@@ -68,7 +71,6 @@ yazi
 zip
 
 # -- System tools ------------------------------------------
-archinstall
 curl
 fastfetch
 gnupg
@@ -78,6 +80,7 @@ man-pages
 reflector
 sudo
 wl-clipboard
+zram-generator
 
 # -- Git ---------------------------------------------------
 git
