@@ -22,7 +22,7 @@ install_paru() {
   sudo pacman -S --needed base-devel git
 
   build_dir=$(mktemp -d)
-  git clone --depth 1 https://aur.archlinux.org/paru-bin.git "$build_dir"
+  git clone --depth 1 https://aur.archlinux.org/paru.git "$build_dir"
   (cd "$build_dir" && makepkg -si) || { rm -rf "$build_dir"; return 1; }
   rm -rf "$build_dir"
 }

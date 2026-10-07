@@ -1,5 +1,5 @@
 # -- Package management ------------------------------------
-paru-bin
+paru
 
 # -- Desktop -----------------------------------------------
 noctalia-greeter
@@ -16,4 +16,3 @@ claude-code
 fff-mcp-bin
 herdr-bin
 openai-codex-bin
-openspec
