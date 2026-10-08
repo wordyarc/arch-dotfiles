@@ -10,7 +10,14 @@
         "removable": false,
         "uki": true
     },
-    "custom_commands": [],
+    "custom_commands": [
+        "sed -i 's/^#\\(ru_RU.UTF-8\\)/\\1/' /etc/locale.gen && locale-gen",
+        "printf '127.0.0.1 localhost\\n::1 localhost\\n127.0.1.1 archlinux.localdomain archlinux\\n' > /etc/hosts",
+        "printf '[zram0]\\nzram-size = ram / 2\\ncompression-algorithm = zstd\\nswap-priority = 100\\n' > /etc/systemd/zram-generator.conf",
+        "mkswap -U clear --size 32G --file /swapfile && echo '/swapfile none swap defaults 0 0' >> /etc/fstab",
+        "sed -i '/^MODULES=/s/()/(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/; /^HOOKS=/s/ kms//' /etc/mkinitcpio.conf && mkinitcpio -P",
+        "bootctl set-timeout 3"
+    ],
     "firmware_optdeps": [],
     "hostname": "archlinux",
     "kernels": [
@@ -35,24 +42,17 @@
     "ntp": true,
     "packages": [
         "amd-ucode",
-        "base-devel",
-        "ghostty",
-        "git",
-        "hyprland",
         "linux-headers",
         "linux-lts-headers",
-        "noctalia",
         "nvidia-open-dkms",
         "nvidia-utils",
-        "qt6-wayland",
+        "sudo",
+        "git",
         "vim",
-        "xdg-desktop-portal-gtk",
-        "xdg-desktop-portal-hyprland",
         "zsh",
-        "noto-fonts",
-        "noto-fonts-emoji",
-        "ttf-jetbrains-mono-nerd",
-        "sound-theme-freedesktop"
+        "man-db",
+        "man-pages",
+        "efibootmgr"
     ],
     "pacman_config": {
         "color": true,
@@ -68,7 +68,9 @@
         }
     },
     "script": null,
-    "services": [],
+    "services": [
+        "systemd-boot-update"
+    ],
     "swap": {
         "algorithm": "zstd",
         "enabled": true

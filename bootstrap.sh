@@ -27,15 +27,27 @@ install_paru() {
   rm -rf "$build_dir"
 }
 
-install_system_files() {
-  local file target
+# sync_tree SRC DEST [AS_ROOT]: mirror SRC/<path> onto DEST/<path>.
+# Identical files are skipped, missing directories are created,
+# executables get 755, everything else 644. Never deletes.
+# AS_ROOT (true/false) selects sudo
+#   sync_tree rootfs /         # system files, sudo
+sync_tree() {
+  local src=$1 dest=$2 as_root=${3:-} file target mode sudo=()
+
+  if [[ -z $as_root ]]; then
+    [[ -w "$dest" ]] && as_root=false || as_root=true
+  fi
+  $as_root && sudo=(sudo)
 
   while IFS= read -r -d '' file; do
-    target=/$file
+    target="${dest%/}/${file#"$src"/}"
     cmp -s "$file" "$target" && continue
-    sudo install -Dm644 "$file" "$target"
+    mode=644
+    [[ -x "$file" ]] && mode=755
+    "${sudo[@]}" install -Dm"$mode" "$file" "$target"
     echo "$target"
-  done < <(find etc -type f -print0)
+  done < <(find "$src" -type f -print0)
 }
 
 enable_services() {
@@ -92,7 +104,7 @@ install_paru
 ./install-config.sh
 install_oh_my_zsh
 install_tmux_plugins
-install_system_files
+sync_tree rootfs /
 enable_services
 setup_user
 
